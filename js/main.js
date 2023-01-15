@@ -1,6 +1,5 @@
 const elForm = document.querySelector('#form');
 const elCards = document.querySelector('.cards');
-
 const elSearchForm = document.querySelector('#search-form');
 const elSearch = document.querySelector('#search')
 
@@ -36,7 +35,7 @@ const renderFilms = (array, parentElement = elCards) => {
         <h3 class="card-title">${element.title}</h3>
         <p class="card-text">${element.overview}</p>
         <p class="text-primary">${element.release_date}</p>
-        <ul>
+        <ul class="p-0">
             <li>${element.genres}</li>
         </ul>
         </div> `
@@ -47,7 +46,7 @@ const renderFilms = (array, parentElement = elCards) => {
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const title = e.target[0].value;
-    const img = e.target[1].value;
+    const poster = e.target[1].value;
     const overview = e.target[2].value;
     const date = e.target[3].value;
     const genres = e.target[4].value;
