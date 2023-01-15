@@ -43,6 +43,8 @@ const renderFilms = (array, parentElement = elCards) => {
     }
 }
 
+renderFilms(films);
+
 elForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const title = e.target[0].value;
@@ -74,4 +76,4 @@ elForm.addEventListener('submit', (e) => {
     }
 });
 
-renderFilms(films);
+
